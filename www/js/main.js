@@ -31,12 +31,12 @@ function fetchUserInput() {
     if (currentVal.length > 1) {
         fetchWeather(currentVal);
     }
-
-};
-
+}
 
 function fetchWeather(input) {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=${myKey}`)
+    fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=${myKey}`
+    )
         .then((response) => response.json())
         .then((data) => newData(data))
         .catch((error) => console.error(error));
@@ -61,7 +61,6 @@ function dispData(data, updateTime) {
     uiContainer.innerHTML = `
     
     <center>
-    <br><br><br><br>
       <div class="card big_card">
       <div class="card-body info_crd">
       
@@ -70,7 +69,7 @@ function dispData(data, updateTime) {
       <p class="fls_lik info_txts">Feels Like: ${tempflcl} °C</p>
       <div class="day flex_box info_txts" id="min_max"><p class="max_tmpr tmprt">Min: ${tempmicl} °C  </p><p  class="min_tmpr tmprt">Max: ${tempmxcl} °C</div><br>
       <div class="icon__info">
-         <p><img class="info_icnn" src="api-icons/icons/${icn}.png" alt="${data.weather[0].main}@2x.png"/></p>
+         <p><img class="info_icnn" src="./img/api-icons/icons/${icn}.png" alt="${data.weather[0].main}@2x.png"/></p>
           <p class="info_txts">Weather Condition: ${data.weather[0].description}</p>
           </div>
           <p class="info_txts">Humidity: ${humi} %</p>
