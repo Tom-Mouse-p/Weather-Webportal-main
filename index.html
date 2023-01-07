@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, 
+		user-scalable=0'>
+	<link rel="shortcut icon" type="image/x-icon" href="weatheral/weatheral.ico">
+	<meta name="theme-color" content="#9142ff" />
+	<meta name="msapplication-navbutton-color" content="#9142ff" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<title>Weatheral : Live Weather & Temperature</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+	<div class="bar bar--bg">
+		<div class="bar__content u-centered">
+			<h5 class="call-to-action__discription">
+				<img src="weatheral/weatheral.png" alt="Weatheral Logo" class="tit_ico">
+			</h5>
+			<input type="checkbox" id="inpNavToggle">
+			<label for="inpNavToggle" class="bar__nav-toggle">
+				<i class="material-icons">menu</i>
+			</label>
+			<nav class="nav">
+				<a class="nav__link" href="https://pranavswebportal.ml">Pranav's Web Portal</a>
+				<a class="nav__link" href="https://shrirajtechnicals.ga">Shriraj Technicals</a>
+				<a class="nav__link" href="https://weatheral-feedback.ml">Help & Feedback</a>
+				<a class="nav__link" href="">Disclaimer</a>
+
+			</nav>
+		</div>
+	</div>
+
+
+
+	<section>
+		<div class="banner">
+			<div class="banner__content">
+				<div class="banner__text">
+					<strong>Note:</strong> We make use of Cookies to make our Websites work much better. This also let
+					you to revisit our site more quickly and reduce your bandwidth.
+				</div>
+				<button class="banner__close" type="button"><span class="material-icons">close</span></button>
+			</div>
+		</div>
+		<div class="searchContainer">
+			<div class="search card card-body">
+				<center>
+					<br><br>
+					<img src="weatheral/weatheral.png" alt="Weatheral Logo" class="hed_ico">
+					<br><br>
+					<p class="lead">Enter Your City's Name And Hit Search!<br>Please turn on GPS before using 'Use my
+						location' feature.</p>
+				</center>
+				<center>
+					<input type="text" id="searchUser" class="form-control" value="" placeholder="Location...">
+					<button class="btn btn-primary" id="submit"><i class="material-icons">search</i></button>
+					<button class="btn btn-primar" id="location"><i class="material-icons"
+							onclick="getLocation()">place</i></button>
+				</center>
+			</div>
+			<br>
+
+			<div id="content">
+				<div id="data.hp">
+
+
+				</div>
+				<br>
+			</div>
+			<br><br>
+
+			<div id="error">
+				<center>
+					<p>Help & Support<i class="material-icons">contact_support</i></p><a><button id="pole"><i
+								class="material-icons">launch</i></button></a>
+				</center>
+			</div>
+			<br><br>
+			<span id="latitude" class="dispnon"></span><br><br>
+			<span id="kyc" class="dispnon"></span>
+
+		</div>
+
+	</section>
+	<footer class="footer_weatheral">
+		<center>
+			<p class="copyright">Pranav's edu Tec &copy</p>
+			<br>
+			<hr class="hr">
+			<br>
+			<div class="credits">
+				<p class="Credits_hed">In Partnership With</p>
+				<a href="https://shrirajtechnicals.ga"><img src="spimg/Shriraj.jpg" alt="Shriraj Technicals"
+						class="support_img"></a><br><br>
+				<br><br><br>
+				<p class="Credits_hed">Powered By</p>
+				<a href="https://openweathermap.org"><img src="spimg/OpenWeatherMap.png" alt="OpenWeatherMap"
+						class="support_img"></a>
+				<br><br><br><br>
+				<a href="https://opencagedata.com"><img src="spimg/OpenCage.svg.png" alt="Opencagedata"
+						class="support_img"></a>
+				<br><br><br><br>
+				<a href="https://github.com"><img src="spimg/github.png" alt="GitHub" class="support_img"></a>
+				<br><br><br><br>
+
+				<br>
+			</div>
+			<hr class="hr">
+			<div class="footer_element">
+				<a href="" class="footer_element_text">Help & Support</a>
+				<br>
+				<a href="" class="footer_element_text">Feedback</a>
+				<br>
+				<a href="" class="footer_element_text">Disclaimer</a>
+			</div>
+			<div class="footer_contact">
+
+			</div>
+		</center>
+	</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<!-- <script defer src="fetch.js"></script>
+<script defer src="hg.js"></script>
+<script defer src="app.js"></script>
+<script defer src="bnr.js"></script> -->
+<script defer src="./gioloc.js"></script>
+<script defer src="./main.js"></script>
+
+</html>
